@@ -40,7 +40,7 @@ class Article(models.Model):
     RELEASE = [('Publish', 'Publish'), ('Draft', 'Draft')]
     title = models.CharField(max_length=50)
     text = models.CharField(max_length=500)
-    release_mode = models.CharField(max_length=1, choices=RELEASE, default='Draft')
+    release_mode = models.CharField(max_length=10, choices=RELEASE, default='Draft')
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
     release_date = models.DateTimeField(auto_now=True)
